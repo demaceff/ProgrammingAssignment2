@@ -20,7 +20,10 @@ makeCacheMatrix <- function(mat = numeric(),n) {
       ## invert the matrix and store the result in 'inv'
       inv<-solve(mat)
       return(inv)
-      m <- NULL
+      m <<- NULL
      } 
+    get <- function() x
+    setmatr <- function(matrix) m <<- mat
+    getmatr <- function() m
 }
 
