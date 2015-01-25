@@ -25,5 +25,8 @@ makeCacheMatrix <- function(mat = numeric(),n) {
     get <- function() x
     setmatr <- function(matrix) m <<- mat
     getmatr <- function() m
+    list(set = set, get = get,
+         setmatr = setmatr,
+         getmart = getmatr)
 }
 
