@@ -12,23 +12,15 @@
 ## Output:
 ###############################################################################################
 makeCacheMatrix <- function(mat = numeric(),n) {
-  ## make a matrix of the vector passed by the call
-  dim(mat)<-c(n,n)
-  ## invert the matrix and store the result in 'inv'
-  inv<-solve(mat)
-  
-##  test<-mat%*%inv
-##  print(test)
-  m <- NULL
-  set <- function(y) {
-    mat <<- y
-    outinv<<-inv  ## keep the inverted matrix
-    m <<- NULL
-  }
-get <- function() mat
-setmat <- function(matrix) m <<- matrix
-getmat <- function() m
-##list(set = set, get = get,setmat = setmat,getmat = getmat)
-print(outinv)   
+    m <- NULL
+    set <- function(y) {
+      mat <<- y
+      ## make a matrix of the vector passed by the call
+      dim(mat)<-c(n,n)
+      ## invert the matrix and store the result in 'inv'
+      inv<-solve(mat)
+      return(inv)
+      m <- NULL
+     } 
 }
 
